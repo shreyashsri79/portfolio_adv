@@ -1,10 +1,11 @@
 
 import Spline from "@splinetool/react-spline/next";
 import { Major_Mono_Display } from "next/font/google";
+import AboutMeCard from "./components/Cards/AboutMe";
 import AboutMe from "./components/AboutMe";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import Contact from "./components/Cards/Contact";
+import Projects from "./components/Cards/Projects";
+import Skills from "./components/Cards/Skills";
 import { Tiny5 } from "next/font/google";
 
 const font = Major_Mono_Display({ subsets: ["latin"], weight: ["400", "400"] })
@@ -21,8 +22,8 @@ export default function Home() {
             />
           </main>
         </div>    
-        <div className={`${font.className} py-15 sm:py-30 absolute inset-0 -z-10 flex justify-center sm:items-start text-center font-extrabold -tracking-tighter text-7xl sm:text-8xl md:text-9xl pointer-events-none`}>
-          SHReYAsH NeeRAJ
+        <div className={`${font.className} py-15 sm:py-30 absolute inset-0 -z-10 flex justify-center sm:items-start text-center font-extrabold -tracking-tighter text-7xl sm:text-8xl md:text-[clamp(2rem,15vw,14rem)] pointer-events-none`}>
+          SHReYAsH <br/> NeeRAJ
         </div>
       </div>
 
@@ -32,13 +33,19 @@ export default function Home() {
 
 
       <div className=" z-10 pointer-events-none m-5 absolute inset-0 flex flex-wrap md:flex-wrap-reverse  justify-center items-start gap-x-20 ">
-        <AboutMe />
+        <AboutMeCard />
         <Skills />
         <Projects />
         <Contact />
       </div>
 
-      <div className={` ${tiny5.className} p-20 flex justify-center w-screen text-3xl`}>Use a mouse plizzz 👉👈</div>
+      <div className={` ${tiny5.className} p-20 flex justify-center w-screen text-3xl text-center`}>
+        Use a mouse plizzz 👉👈 <br/>Mobile Experience is gonna be autistic<br/>If it breaks in your browser, change your browser </div>
+
+      <div className="p-10">
+        <AboutMe />
+      </div>
+      
       
     </>
   );
