@@ -8,6 +8,7 @@ import Projects from "./components/Cards/Projects";
 import Skills from "./components/Cards/Skills";
 import { Tiny5 } from "next/font/google";
 import MyCountryLookup from "./components/Projects/MyCountryLookup";
+import InSnap from "./components/Projects/InSnap";
 
 const font = Major_Mono_Display({ subsets: ["latin"], weight: ["400", "400"] })
 const tiny5 = Tiny5({ subsets: ["latin"], weight: ["400", "400"] })
@@ -43,8 +44,11 @@ export default function Home() {
       <div className={` ${tiny5.className} p-20 flex justify-center w-screen text-3xl text-center`}>
         Use a mouse plizzz 👉👈 <br/>Mobile Experience is gonna be autistic<br/>If it breaks in your browser, change your browser </div>
 
-      <div>
-        <MyCountryLookup />
+      <div className="py-30">
+        <MyCountryLookup/>
+      </div>
+      <div className="py-40">
+        <InSnap />
       </div>
       
       
