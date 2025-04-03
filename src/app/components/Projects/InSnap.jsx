@@ -9,7 +9,7 @@ const tiny5 = Oxanium({ subsets: ["latin"], weight: ["400", "400"] })
 const InSnap = () => {
   return (
     <div>
-        <div className="flex relative inset-0 z-10">
+        <div className="flex flex-col sm:flex-row relative inset-0 z-10">
           <div className='h-screen w-1/2 p-10'>
             <Spline  
               scene="https://prod.spline.design/4T3-bzWAdDBhgwtb/scene.splinecode" 

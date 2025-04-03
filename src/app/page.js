@@ -5,10 +5,12 @@ import AboutMeCard from "./components/Cards/AboutMe";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Cards/Contact";
 import Projects from "./components/Cards/Projects";
-import Skills from "./components/Cards/Skills";
+import SkillsCard from "./components/Cards/Skills";
 import { Tiny5 } from "next/font/google";
 import MyCountryLookup from "./components/Projects/MyCountryLookup";
 import InSnap from "./components/Projects/InSnap";
+import Skills from "./components/Skills";
+import Others from "./components/Projects/Others";
 
 const font = Major_Mono_Display({ subsets: ["latin"], weight: ["400", "400"] })
 const tiny5 = Tiny5({ subsets: ["latin"], weight: ["400", "400"] })
@@ -36,7 +38,7 @@ export default function Home() {
 
       <div className=" z-10 pointer-events-none m-5 absolute inset-0 flex flex-wrap md:flex-wrap-reverse  justify-center items-start gap-x-20 ">
         <AboutMeCard />
-        <Skills />
+        <SkillsCard />
         <Projects />
         <Contact />
       </div>
@@ -44,13 +46,27 @@ export default function Home() {
       <div className={` ${tiny5.className} p-20 flex justify-center w-screen text-3xl text-center`}>
         Use a mouse plizzz 👉👈 <br/>Mobile Experience is gonna be autistic<br/>If it breaks in your browser, change your browser </div>
 
-      <div className="py-30">
+      <div className="py-10">
+        <div className="flex flex-col w-full items-center py-10">
+          <h2 className={`${tiny5.className} text-[clamp(2rem,15vw,11rem)]`}>
+            Projects
+          </h2>
+          <p className={`${tiny5.className} text-[clamp(2rem,15vw,1rem)]`}>
+            "My two stupidest projects"
+          </p>
+        </div>
+        <div className="p-10"></div>     
         <MyCountryLookup/>
       </div>
+
       <div className="py-40">
         <InSnap />
       </div>
       
+      <div>
+        <Others />
+      </div>
+      <Skills />
       
     </>
   );
