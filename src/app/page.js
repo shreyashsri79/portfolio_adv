@@ -52,8 +52,9 @@ export default function Home() {
             Projects
           </h2>
           <p className={`${tiny5.className} text-[clamp(2rem,15vw,1rem)]`}>
-            "My two stupidest projects"
+            &quot;My two stupidest projects&quot;
           </p>
+
         </div>
         <div className="p-10"></div>     
         <MyCountryLookup/>
