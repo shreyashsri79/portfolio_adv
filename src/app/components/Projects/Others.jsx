@@ -50,9 +50,6 @@ const Others = () => {
         <p className="text-lg text-gray-400">Some of my other notable (not really) works</p>
       </motion.div>
 
-      <img src="https://github-readme-stats.vercel.app/api/top-langs?username=shreyashsri79&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" 
-        height="150" 
-        alt="languages graph" />
       {/* Draggable Floating Project Cards */}
       <div className="relative flex flex-wrap gap-10 justify-center">
         {projects.map((project, index) => (
@@ -64,10 +61,10 @@ const Others = () => {
             whileTap={{ scale: 0.95 }}
             animate={{ y: [0, 10, 0] }} // Floating effect
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            className="bg-[#111827] p-4 w-56 rounded-xl shadow-lg backdrop-blur-md bg-opacity-50 cursor-grab active:cursor-grabbing"
+            className={`${fontDesc.className} bg-[#111827] p-4 w-56 rounded-xl shadow-lg backdrop-blur-md bg-opacity-50 cursor-grab active:cursor-grabbing`}
           >
             <img src={project.img} alt={project.title} className="w-40 h-40 object-cover rounded-md mb-3 mx-auto" />
-            <h3 className={`${fontTitle.className}text-lg font-semibold text-center`}>{project.title}</h3>
+            <h3 className={` text-lg font-semibold text-center`}>{project.title}</h3>
             <h4 className="text-md font-semibold text-center text-gray-400">{project.med}</h4>
             <p className="text-gray-400 text-sm text-center">{project.description}</p>
           </motion.div>

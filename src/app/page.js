@@ -67,8 +67,10 @@ export default function Home() {
       <div>
         <Others />
       </div>
-      <Skills />
-      
+      <div className="p-20">
+        <Skills />
+      </div>
+      <AboutMe />
     </>
   );
 }

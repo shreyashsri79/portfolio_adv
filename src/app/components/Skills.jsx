@@ -4,14 +4,15 @@ import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import bg from '../res/about_me_bg.gif'
 import Image from 'next/image';
-import { Major_Mono_Display } from 'next/font/google';
+import { Major_Mono_Display, Happy_Monkey } from 'next/font/google';
 
 const font = Major_Mono_Display({ subsets: ["latin"], weight: ["400", "400"] })
+const happyMonke = Happy_Monkey({ subsets: ["latin"], weight: ["400", "400"] })
 
 const skills = {
   languages: ['Java', 'C++', 'Kotlin','JavaScript', 'TypeScript', 'Python', 'HTML', 'CSS'],
-  frameworks: ['Express', 'Vite','React', 'React Native', "NextJs",'Tailwind', 'Jetpack'],
-  tools: ['Android', 'Git', 'MongoDB', "Postgres SQL" ,'Node.js', 'Postman'],
+  frameworks: ['Express', 'Vite','React', "NextJs",'Tailwind', 'Jetpack'],
+  tools: ['Android', 'Git', "Postgres SQL" ,'Node.js', 'Postman'],
 };
 
 const techIcons = {
@@ -52,7 +53,7 @@ const techMemes = {
   React: 'prop drilling goes brrr..',
   'React Native': "prop drilling but on mobile",
   NextJs: "adult crush",
-  Tailwind: "why write css that way when I can write css this way",
+  Tailwind: "why css that way when I can css this way",
   Jetpack : "the only good ui framework",
   Android: 'yess, yes the native one',
   Git: 'only place I get to commit',
@@ -95,7 +96,7 @@ const Skills = () => {
       <div
         className={`text-center mb-12 relative z-10`}
       >
-        <h2 className={`${font.className}p-5 text-9xl font-bold text-white mb-6`}>Skills</h2>
+        <h2 className={`${font.className} p-5 text-9xl font-bold text-white mb-6`}>SKILLS</h2>
       </div>
       
       {/* Skills Categories */}
@@ -114,7 +115,7 @@ const Skills = () => {
                     whileHover={{ scale: 1.2 }}
                   />
                   <div
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 text-sm text-center opacity-0 bg-black text-white px-3 py-1 rounded-lg  group-hover:opacity-100 transition-opacity duration-300 w-30"
+                    className={`${happyMonke.className} absolute top-full left-1/2 transform -translate-x-1/2 text-sm text-center opacity-0 bg-black text-white px-3 py-1 rounded-lg  group-hover:opacity-100 transition-opacity duration-300 w-30`}
                   >
                     {techMemes[tech]}
                   </div>
